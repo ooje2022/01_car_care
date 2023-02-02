@@ -1,0 +1,18 @@
+
+    .jumbotron {
+        background: none;
+        position: fixed;
+        left: 50px;
+    }
+    
+    .bottom {
+        position: fixed;
+        bottom: 0;
+    }
+    
+    .bottomright {
+        position: fixed;
+        bottom: 8px;
+        right: 16px;
+        font-size: 18px
+    }

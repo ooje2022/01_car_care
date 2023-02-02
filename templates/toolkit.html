@@ -1,0 +1,32 @@
+{% extends 'base_pg2.html' %}
+
+{% block body_block %}
+
+<form action="{% url 'toolkit' %}" method='post' enctype="multipart/form-data">
+    {% csrf_token %} <!--csrf - croo site request for generic token
+    it is used to prevent hacking of image save request from client 
+    to server by malicious third party. It creates an alphanumeric 
+    token to be used between the client and server-->
+
+    <p>{{ form.non_field_errors }}</p>
+    <p>
+        {{ form.imagefile.label_tag }}
+        {{ form.imagefile.help_text }}
+    </p>
+    <p>
+        {{ form.imagefile.errors }}
+        {{ form.imagefile }}
+    </p>
+    <p>
+        <input type="submit" name="upload_img" value="Upload">
+    </p>
+
+</form>
+
+{% if documents %}
+
+    <img src="{{ image_path1 }}" alt="">
+    
+{% endif %}
+
+{% endblock %}

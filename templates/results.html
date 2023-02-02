@@ -1,0 +1,30 @@
+{% extends 'base_pg1.html' %}
+    {% block body_block %}
+    
+    <h1>Care Assessment Report :</h1>
+    <div class="jumbotron2">
+        <h3>Car Check :</h3>
+        {{ g1_pix }}
+
+        <h3>Damage Check :</h3>
+        {{ g2_pix }}
+
+        <h3>Location Check :</h3>
+        {{ loc }}
+
+        <h3>Severity Check :</h3>
+        {{ sev }}
+
+        <h3>Additional Services :</h3>
+        {{ ns|linebreaks }}
+
+
+    </div>
+
+    <div class="bottom">
+        <h5>Thanks for using care care portal</h5>
+        <h6>Copyright : johnsonojeniyi@gmail.com</h6>
+        
+
+    </div>
+{% endblock %}
